@@ -1,0 +1,45 @@
+.ng-invalid { }
+.ng-valid { }
+.ng-untouched { }
+.ng-touched { }
+.ng-dirty { }
+.ng-pristine { }
+.error{
+     color: red;
+}
+
+body{
+     font-family: sans-serif;
+     width: 900px;
+}
+#container{
+     width: 800px;
+}
+#form, #success{
+     width: 700px;
+     border: 1px black solid;
+     /*text-align: right;*/
+     padding-right:50px;
+     padding-left: 50px;
+     margin-bottom: 10px;
+}
+h2{
+     text-align: left;
+}
+.button{
+     width:800px;
+     border: none;
+     height: 40px;
+     color:#ffffff;
+     background-color: #777777;
+}
+.formWidth{
+     width:150px;
+     display: inline-block;
+     margin-right: 7px;
+}
+.pWidth{
+     text-align: right;
+     display: inline-block;
+     width:150px;
+}

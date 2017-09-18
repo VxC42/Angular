@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="utf-8">
+          <title></title>
+     </head>
+     <body><h1>Registration</h1>
+          <div id="container">
+               <div *ngIf="displayMsg" id="success"><p>Thank you for registering with us {{user.firstName}}.  We just sent you a confirmation email at {{user.email}}, and we will send all mail to {{user.address}}, {{user.city}} {{user.state}}.</p>
+               <p> Have a wonderful day!</p></div>
+
+                    <form (submit)="onSubmit()" #formData="ngForm">
+
+                         <div id="form">
+                         <h2>Account Information</h2>
+                         <p>  <span class="pWidth">*First Name:</span>
+                              <input class="formWidth"
+                                   type="text"
+                                   name="firstName"
+                                   required
+                                   minlength="2"
+                                   maxlength="24"
+                                   [(ngModel)]="user.firstName"
+                                   #firstName='ngModel'
+                              />
+                              <span *ngIf="!firstName.valid" class ="error" >First name is required.</span>
+                         </p>
+                         <p> <span class="pWidth">*Last Name:</span>
+                              <input class="formWidth"
+                                   type="text"
+                                   name="lastName"
+                                   required
+                                   minlength="2"
+                                   maxlength="24"
+                                   [(ngModel)]="user.lastName"
+                                   #lastName='ngModel'
+                              />
+                              <span *ngIf="!lastName.valid" class ="error" >Last name is required.</span>
+                         </p>
+                         <p> <span class="pWidth">*Email:</span>
+                              <input class="formWidth"
+                                   type="text"
+                                   name="email"
+                                   required
+                                   minlength="6"
+                                   pattern='^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'
+                                   [(ngModel)]="user.email"
+                                   #email='ngModel'
+                              />
+                              <span *ngIf="!email.valid" class ="error" >Email must be valid.</span>
+                         </p>
+                         <p> <span class="pWidth">*Password:</span>
+                              <input class="formWidth"
+                                   type="password"
+                                   name="password"
+                                   required
+                                   minlength="16"
+                                   [(ngModel)]="user.password"
+                                   #password='ngModel'
+                              /><!--pattern="^([a-zA-Z0-9@*#])$"-->
+                              <span *ngIf="!password.valid" class ="error" >Password must be at least 16 characters long</span>
+                         </p>
+                         <p> <span class="pWidth">*Confirm Password:</span>
+                              <input class="formWidth"
+                                   type="password"
+                                   name="passwordConfirm"
+                                   required
+                                   minlength="16"
+                                   [(ngModel)]="user.passwordConfirm"
+                                   #passwordConfirm='ngModel'
+                              />
+                              <span *ngIf="user.passwordConfirm != user.password" class ="error" >Password Confirmation must match Password.</span>
+                         </p>
+                         <p> <span class="pWidth">*Street Address:</span>
+                              <input class="formWidth"
+                                   type="text"
+                                   name="address"
+                                   required
+                                   minlength="2"
+                                   [(ngModel)]="user.address"
+                                   #address='ngModel'
+                              />
+                              <span *ngIf="!address.valid" class ="error" >Address is required.</span>
+                         </p>
+                         <p> <span class="pWidth">Unit/Apt #:</span>
+                              <input class="formWidth"
+                                   type="text"
+                                   name="unit"
+                                   [(ngModel)]="user.unit"
+                                   #unit='ngModel'
+                              />
+                         </p>
+                         <p> <span class="pWidth">*City:</span>
+                              <input class="formWidth"
+                                   type="text"
+                                   name="city"
+                                   required
+                                   minlength="2"
+                                   [(ngModel)]="user.city"
+                                   #city='ngModel'
+                              />
+                              <span *ngIf="!city.valid" class ="error" >City is required.</span>
+                         </p>
+                         <p> <span class="pWidth">*State:</span>
+                              <select class="formWidth"
+                                   name="state"
+                                   required
+                                   [(ngModel)]="user.state"
+                                   #state='ngModel'
+                              >
+                                   <option value="alabama">Alabama</option>
+                                   <option value="alaska">Alaska</option>
+                                   <option value="arizona">Arizona</option>
+                                   <option value="arkansas">Arkansas</option>
+                                   <option value="california">California</option>
+                                   <option value="colorado">Calorado</option>
+                                   <option value="connecticut">Connecticut</option>
+                                   <option value="delaware">Delaware</option>
+                                   <option value="florida">Florida</option>
+                                   <option value="georgia">Georgia</option>
+                                   <option value="hawaii">Hawaii</option>
+                                   <option value="idaho">Idaho</option>
+                                   <option value="illinois">Illinois</option>
+                                   <option value="indiana">Indiana</option>
+                                   <option value="iowa">Iowa</option>
+
+                              </select>
+                              <span *ngIf="!state.valid" class ="error" >State is required.</span>
+                         </p>
+                         <p> <span class="pWidth">*I'm feeling lucky:</span>
+                              <span class="formWidth">
+                                   <input
+                                   type="radio"
+                                   name="lucky"
+                                   value="Yes"
+                                   required
+                                   [(ngModel)]="user.lucky"
+                                   #lucky='ngModel'
+                                   /> Yes
+                                   <input
+                                        type="radio"
+                                        name="lucky"
+                                        value="No"
+                                        required
+                                        [(ngModel)]="user.lucky"
+                                        #lucky='ngModel'
+                                   />No
+                              </span>
+                              <span *ngIf="!lucky.valid" class ="error" >Choosing how you feel is required.</span>
+                         </p>
+
+                         </div>
+
+                         <input type="submit" value="submit" class="button" [disabled]='formData.invalid'>
+                    </form>
+
+
+          </div>
+
+     </body>
+</html>
