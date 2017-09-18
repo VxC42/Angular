@@ -1,0 +1,23 @@
+body{
+     font-family: sans-serif;
+     width: 900px;
+}
+#container{
+     border: 1px solid black;
+     width: 800px;
+     padding-left: 30px;
+     padding-bottom: 30px;
+}
+table{
+     text-align: left;
+     width: 100%;
+}
+
+th{
+     font-size: 125%;
+     margin-bottom: 10px;
+     
+}
+td{
+     line-height: 25px;
+}

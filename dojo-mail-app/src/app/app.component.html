@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="utf-8">
+          <title>{{title}}</title>
+     </head>
+     <body>
+          <div id='container'>
+               <h1> {{title}}</h1>
+               <table>
+                    <tr>
+                         <th>Email</th>
+                         <th>Importance</th>
+                         <th>Subject</th>
+                         <th>Content</th>
+                    </tr>
+                    <tr *ngFor='let email of emailArray'>
+                         <td>{{email.email | lowercase }}</td>
+                         <td *ngIf='email.importance'>high</td>
+                         <td *ngIf='!email.importance'>low</td>
+                         <td>{{email.subject}}</td>
+                         <td>{{email.content}}</td>
+                    </tr>
+               </table>
+          </div>
+     </body>
+</html>

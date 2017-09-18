@@ -1,0 +1,22 @@
+#container{
+     width: 600px;
+     text-align: center;
+     font-family: sans-serif;
+}
+button{
+     border: none;
+     padding: 7px 15px;
+     margin: 0 10px;
+     background: #666666;
+     color: #ffffff;
+}
+button:hover{
+     background: #ffffff;
+     color: #666666;
+
+}
+
+button:active{
+     background: #ffffff;
+     color: #666666;
+}
