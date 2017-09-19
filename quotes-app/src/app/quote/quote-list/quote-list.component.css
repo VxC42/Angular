@@ -1,0 +1,42 @@
+.displayedQuote{
+     width: 900px;
+     border: 1px black solid;
+     margin-bottom: 10px;
+}
+.textQuote{
+     width: 640px;
+     vertical-align: top;
+     display: inline-block;
+     padding-top: 10px;
+     padding-left: 10px;
+}
+.likes{
+     display: inline-block;
+     vertical-align: top;
+     width:30px;
+     margin:75px 20px 0 20px;
+}
+
+.buttons button{
+     width: 130px;
+     border: 1px black solid;
+     padding: 15px 25px;
+     box-shadow: 2px 2px 3px #222222;
+
+}
+.buttons{
+     width: 150px;
+     text-align: center;
+     display: inline-block;
+}
+.up{
+     background-color: #b6d7a8;
+
+}
+.down{
+     background-color: #ea9899;
+}
+.delete{
+     background-color: #333333;
+     color: #ffffff;
+}

@@ -1,0 +1,23 @@
+textarea{
+     width: 600px;
+     height: 100px;
+     display: inline-block;
+     resize: vertical;
+}
+#errors{
+     width: 300px;
+     display: inline-block;
+     color: red;
+     margin-left: 5px;
+     vertical-align: top;
+     text-align: center;
+}
+.right{
+     width: 605px;
+     text-align: right;
+}
+.button{
+     border:1px black solid;
+     padding: 5px 15px;
+     background-color: #ffffff;
+}
