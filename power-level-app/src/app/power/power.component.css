@@ -1,0 +1,19 @@
+fieldset{
+     width: 910px;
+     padding: 20px;
+}
+form{
+     display: inline-block;
+}
+#setPower{
+     height: 100px;
+}
+.button{
+     border: 1px black solid;
+     padding: 5px 25px;
+     background-color: #ffffff;
+}
+.number{
+     width: 50px;
+     height: 20px;
+}

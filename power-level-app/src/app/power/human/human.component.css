@@ -1,0 +1,9 @@
+body{ 
+     display: inline-block;
+}
+fieldset{
+     width: 250px;
+     height: 150px;
+     display: inline-block;
+     background-color: #fff9e6;
+}

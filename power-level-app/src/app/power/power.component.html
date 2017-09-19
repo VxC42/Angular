@@ -1,0 +1,22 @@
+<body>
+     <fieldset>
+          <legend>
+               PowerComponent
+          </legend>
+          <div id="setPower">
+               Initial Power Level:
+               <form (submit)="onSubmit()">
+                    <input value="{{initPower}}" [(ngModel)]="initPower" type="number" min="1" max="100" value="100" class="number" name="initPower" required>
+                    <input type="submit" value="Calculate Powers" class="button">
+               </form>
+          </div>
+
+          <app-human mult=1 [initPower]="newPower"></app-human>
+          <app-saiyan mult=10 [initPower]="newPower"></app-saiyan>
+          <app-super-saiyan mult=90 [initPower]="newPower"></app-super-saiyan>
+          <app-super-saiyan-two mult=150 [initPower]="newPower"></app-super-saiyan-two>
+          <app-super-saiyan-three mult=250  [initPower]="newPower"></app-super-saiyan-three>
+          <app-super-saiyan-four mult=500  [initPower]="newPower"></app-super-saiyan-four>
+
+     </fieldset>
+</body>
