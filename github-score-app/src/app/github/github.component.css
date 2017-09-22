@@ -1,0 +1,37 @@
+#form{
+     display: inline-block;
+     width: 400px;
+
+}
+#score{
+     display: inline-block;
+     width: 300px;
+     text-align: center;
+
+}
+.button{
+     width: 305px;
+     border: 1px solid black;
+     padding: 7px 0;
+     color:#ffffff;
+     background-color: #666666;
+}
+.message{
+     text-align: center;
+     font-weight: bold;
+}
+.red{
+     color: red;
+}
+.orange{
+     color: orange;
+}
+.green{
+     color: green;
+}
+.black{
+     color:black;
+}
+.blue{
+     color:blue;
+}
